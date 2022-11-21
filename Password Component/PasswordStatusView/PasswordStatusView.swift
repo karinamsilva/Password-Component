@@ -155,13 +155,25 @@ extension PasswordStatusView {
         return false
     }
     
-    
-    
     func reset() {
         lengthCriteriaView.reset()
         uppercaseCriteriaView.reset()
         lowercaseCriteriaView.reset()
         digitCriteriaView.reset()
         specialCharacterCriteriaView.reset()
+    }
+}
+
+extension PasswordCriteriaView {
+    var isCheckMarkImage: Bool {
+        return imageView.image == checkmarkImage
+    }
+    
+    var isXmarkImage: Bool {
+        return imageView.image == xmarkImage
+    }
+    
+    var isResetImage: Bool {
+        return imageView.image == circleImage
     }
 }
